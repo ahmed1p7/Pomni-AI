@@ -53,8 +53,8 @@ npm start
 
 <h4>
 
-**To subscribe, contact the developer [here](https://wa.me/201023727053?text=Discount+code+veni_code_1)**  
-**Discount code:** `veni_code_1`
+**For support, contact the developer [here](https://wa.me/201023727053?text=عند+مشكله)**  
+**Discount code:** `veni`
 
 </h4>
 
