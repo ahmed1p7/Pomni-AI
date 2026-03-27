@@ -7,7 +7,7 @@ const handler = async (m, { conn, text, bot }) => {
 };
 
 handler.usage = ["بوت"];
-handler.category = "Ai";
+handler.category = "ai";
 handler.command = ["بوت"];
 
 export default handler;

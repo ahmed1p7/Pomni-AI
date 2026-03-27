@@ -9,7 +9,7 @@ m.reply(data)
 };
 
 handler.usage = ["اوبن"];
-handler.category = "Ai";
+handler.category = "ai";
 handler.command = ["اوبن"];
 
 export default handler;
