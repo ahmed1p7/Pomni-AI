@@ -16,9 +16,9 @@ const handler = async (m, { conn }) => {
     }
 };
 
-handler.usage = ["تغيير_صوره_البوت"];
+handler.usage = ["ضع"];
 handler.category = "owner";
-handler.command = ["تغيير_صوره_البوت", "setbotpp", "botpp"];
+handler.command = ["ضع", "botpp""];
 handler.owner = true;
 
 export default handler;
