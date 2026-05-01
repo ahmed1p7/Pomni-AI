@@ -5,6 +5,7 @@ if (subBots.list().length >= 30) {
 } // عدد البوتات الي مسموح ب ربطهم فقط
 
 */
+  if (global.db.noSub) return m.reply("المطور قافل التنصيب")
   try {
     const num = m.sender.split("@")[0].replace(/[+\s-]/g, '');
 

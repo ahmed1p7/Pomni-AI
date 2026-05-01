@@ -41,6 +41,8 @@ async function handler(m, { conn, command, args }) {
             bodyText:  menu,
             footerText: "𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️",
             buttons: [
+    { name: "quick_reply", params: { display_text: "🪐 ايقاف التنصيب (البوتات الفرعي)", id: ".تفعيل ايقاف_الفرعي" } },
+    { name: "quick_reply", params: { display_text: "🚀 تشغيل التنصيب", id: ".تفعيل تشغيل_الفرعي" } },
     { name: "quick_reply", params: { display_text: "🔇 ايقاف الترحيب", id: ".تفعيل ايقاف_الترحيب" } },
     { name: "quick_reply", params: { display_text: "🔊 تشغيل الترحيب", id: ".تفعيل تشغيل_الترحيب" } },
     { name: "quick_reply", params: { display_text: "👑 تشغيل الادمن", id: ".تفعيل تشغيل_الادمن" } },
@@ -70,6 +72,23 @@ async function handler(m, { conn, command, args }) {
     let result;
     
     switch (subCmd) {
+    case 'ايقاف_الفرعي':
+            if (!m.isOwner) {
+                result = '*❌ الأمر ده بس لـ المطور*';
+                break;
+            }
+            global.db.noSub = true;
+            result = '*✅ تم ايقاف تنصيب البوتات الفرعيه*\n> ماحدش هيعرف يستخدم امر تنصيب تاني';
+            break;
+            
+        case 'تشغيل_الفرعي':
+            if (!m.isOwner) {
+                result = '*❌ الأمر ده بس لـ المطور*';
+                break;
+            }
+            global.db.noSub = false;
+            result = '*✅ تم تشغيل تنصيب البوتات الفرعيه*\n> دلوقتي الكل يقدر يستخدم البوتات الفرعيه';
+            break;
         case 'ايقاف_الترحيب':
             if (!m.isOwner && !m.isAdmin) {
                 result = '*❌ هذا الأمر للمشرفين فقط*';
